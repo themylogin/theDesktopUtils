@@ -30,7 +30,7 @@ int main(int argc, char** argv)
     while (1)
     {
         // Подключение к MPD-серверу
-        struct mpd_connection* conn = mpd_connection_new("192.168.0.4", 6600, 30000);
+        struct mpd_connection* conn = mpd_connection_new(NULL, 0, 30000);
         if (mpd_connection_get_error(conn) != MPD_ERROR_SUCCESS)
         {
             goto finish;
