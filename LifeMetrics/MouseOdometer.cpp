@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
         for (int t = 0; t < 5 /* minutes */ * 60 /* seconds */ * 1000000 /* microseconds */ / 10000 /* poll interval */; t++)
         {
         	int root_x_return, root_y_return, win_x_return, win_y_return;
-    		Window root_return, child_return;
+            Window root_return, child_return;
     	    unsigned int mask_return;
         	XQueryPointer(display, root, &root_return, &child_return, &root_x_return, &root_y_return, &win_x_return, &win_y_return, &mask_return);
 
