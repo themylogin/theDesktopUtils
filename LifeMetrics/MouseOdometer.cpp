@@ -23,11 +23,11 @@ int main(int argc, char* argv[])
             unsigned int mask_return;
             XQueryPointer(display, root, &root_return, &child_return, &root_x_return, &root_y_return, &win_x_return, &win_y_return, &mask_return);
 
-        	pixels += sqrt((root_x_last - root_x_return) * (root_x_last - root_x_return) + (root_y_last - root_y_return) * (root_y_last - root_y_return));
-        	root_x_last = root_x_return;
-        	root_y_last = root_y_return;
+            pixels += sqrt((root_x_last - root_x_return) * (root_x_last - root_x_return) + (root_y_last - root_y_return) * (root_y_last - root_y_return));
+            root_x_last = root_x_return;
+            root_y_last = root_y_return;
 
-        	usleep(10000);
+            usleep(10000);
         }
 
         FILE* fh = fopen(argv[1], "a");
