@@ -11,6 +11,8 @@
 *.la
 *.a
 
+LifeMetrics/MouseOdometer
+LifeMetrics/MouseOdometer.log
 MusicJokes/build
 MusicJokes/dist
 MountManager/build
