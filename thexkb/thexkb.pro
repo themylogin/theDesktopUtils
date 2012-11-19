@@ -9,6 +9,7 @@ QT       += core gui
 TARGET = thexkb
 TEMPLATE = app
 
+LIBS += -lX11
 
 SOURCES += main.cpp
 
