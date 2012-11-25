@@ -1,0 +1,8 @@
+#!/usr/bin/env python2
+# -*- coding: utf8 -*-
+my_uin = "123456"
+
+merge = [
+    ["567890", "567890@qip.ru"],
+    ["5647382910", "username@jabber.org"],
+]

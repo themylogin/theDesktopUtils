@@ -11,8 +11,12 @@
 *.la
 *.a
 
+# Python
+*.py[co]
+
 LifeMetrics/MouseOdometer
 LifeMetrics/MouseOdometer.log
+LifeMetrics/PidginHistoryStackedAreaChartConfig.py
 MusicJokes/build
 MusicJokes/dist
 MountManager/build
