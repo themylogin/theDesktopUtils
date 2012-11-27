@@ -22,8 +22,8 @@
  */
 int main(int argc, char** argv)
 {
-    int music_will_finish_at;
-    int last_printed_music_will_finish_at = -2;
+    time_t music_will_finish_at;
+    time_t last_printed_music_will_finish_at = -2;
     FILE* fp = fopen("/tmp/musicjokes.txt", "w");
     
     // Цикл переподключения к MPD-серверу
