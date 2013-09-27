@@ -64,9 +64,9 @@ dates = []
 lens = 0
 for buddy in messages.keys():
     for message in messages[buddy]:
-        i = (time.mktime(message[0].timetuple()))
+        i = int(time.mktime(message[0].timetuple()))
 
-        if not (i >= 1357020000 and i <= 1359698400):
+        if not (i >= int(sys.argv[1]) and i <= int(sys.argv[2])):
             continue
 
         dates.append(i)
