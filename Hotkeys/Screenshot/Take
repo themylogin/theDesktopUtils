@@ -1,0 +1,14 @@
+#!/bin/bash
+BASEDIR="/home/themylogin/Storage/Screenshots"
+DIRECTORY=`date +%Y/%m`
+FILENAME="$DIRECTORY/"`date +%Y-%m-%d_%H:%M:%S`".png"
+
+mkdir -p $BASEDIR/$DIRECTORY
+if [ "$1" == "area" ];
+then
+    scrot -sb $BASEDIR/$FILENAME
+else
+    scrot $BASEDIR/$FILENAME
+fi
+ 
+echo -n $FILENAME > $BASEDIR/.last

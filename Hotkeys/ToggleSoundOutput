@@ -1,0 +1,21 @@
+#!/bin/bash
+if [[ `amixer get Front | grep "\[on\]"` == "" ]]
+then
+    amixer set Front on
+    printf "\rMain.Source=CD\r" | nc 192.168.0.4 6789
+    
+    if [[ -f /tmp/mpd_was_playing ]]
+    then
+        mpc play
+        rm /tmp/mpd_was_playing
+    fi
+else
+    amixer set Front off
+    printf "\rMain.Source=Aux\r" | nc 192.168.0.4 6789
+
+    if [[ `mpc | grep "\[playing\]"` != "" ]]
+    then
+        touch /tmp/mpd_was_playing
+        mpc pause
+    fi
+fi

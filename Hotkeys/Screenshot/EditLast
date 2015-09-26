@@ -1,0 +1,3 @@
+#!/bin/bash
+LOCAL="/home/themylogin/Storage/Screenshots"
+gimp $LOCAL/`cat $LOCAL/.last`

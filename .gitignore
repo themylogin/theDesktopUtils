@@ -26,6 +26,9 @@ MountManager/bin/MountManager
 
 LifeMetrics/PidginHistoryStackedAreaChartConfig.py
 LifeMetrics/UsageStats
+Mouse/move-window
+Mouse/resize-window
 MountManager/bin/MountManager
+parallelPowerDaemon/parallelPowerDaemon
 thexkb/Makefile
 thexkb/thexkb

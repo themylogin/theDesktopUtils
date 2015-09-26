@@ -1,0 +1,8 @@
+#!/bin/bash
+LOCAL="/home/themylogin/Storage/Screenshots"
+REMOTE="/home/themylogin/Server/www/storage.thelogin.ru/screenshots"
+REMOTEURL="http://storage.thelogin.ru/screenshots"
+
+LAST=`cat $LOCAL/.last`
+(cd $LOCAL; cp --parents $LAST $REMOTE)
+xdg-open "$REMOTEURL/$LAST"

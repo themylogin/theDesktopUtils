@@ -1,0 +1,9 @@
+#!/bin/bash
+# Author: http://ru.wikipedia.org/wiki/2C-I
+. `dirname $0`/Take area
+
+feh $BASEDIR/$FILENAME &
+sleep 0.1
+xdotool key alt+space
+sleep 0.1
+xdotool key m

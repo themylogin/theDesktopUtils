@@ -1,0 +1,11 @@
+#!/bin/bash
+TITLE="$1"
+COMMAND="$2"
+
+WINDOW_ID=`wmctrl -pl | grep "$TITLE" | awk '{print $1}'`
+if [ "$WINDOW_ID" != "" ];
+then
+    wmctrl -ia $WINDOW_ID
+else
+    eval $COMMAND &
+fi

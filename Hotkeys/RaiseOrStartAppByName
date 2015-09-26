@@ -1,0 +1,41 @@
+#!/bin/bash
+if [ "$#" == "1" ]
+then
+    NAME="$1"
+    WINDOW_TITLE_FILTER=""
+    COMMAND="$1"
+fi
+if [ "$#" == "2" ]
+then
+    NAME="$1"
+    WINDOW_TITLE_FILTER=""
+    COMMAND="$2"
+fi
+if [ "$#" == "3" ]
+then
+    NAME="$1"
+    WINDOW_TITLE_FILTER="$2"
+    COMMAND="$3"
+fi
+
+PROCESSES=`pidof $NAME`
+if [ "$PROCESSES" != "" ]
+then
+    for PROCESS_ID in $PROCESSES
+    do
+        if [ "$WINDOW_TITLE_FILTER" == "" ];
+        then
+            WINDOW_ID=`wmctrl -pl | grep " $PROCESS_ID " | awk '{print $1}'`
+        else
+            WINDOW_ID=`wmctrl -pl | grep " $PROCESS_ID " | eval "grep $WINDOW_TITLE_FILTER" | awk '{print $1}'`
+        fi
+
+        if [ "$WINDOW_ID" != "" ];
+        then
+            wmctrl -ia $WINDOW_ID
+            exit
+        fi
+    done
+else
+    eval $COMMAND &
+fi
