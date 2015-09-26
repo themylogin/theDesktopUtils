@@ -14,11 +14,18 @@
 # Python
 *.py[co]
 
-LifeMetrics/MouseOdometer
-LifeMetrics/MouseOdometer.log
+# QtCreator/NetBeans
+build
+dist
+nbproject
+.dep.inc
+moc_*
+*.pro.user
+
+MountManager/bin/MountManager
+
 LifeMetrics/PidginHistoryStackedAreaChartConfig.py
-MusicJokes/build
-MusicJokes/dist
-MusicJokes/nbproject
-MountManager/build
+LifeMetrics/UsageStats
+MountManager/bin/MountManager
+thexkb/Makefile
 thexkb/thexkb
